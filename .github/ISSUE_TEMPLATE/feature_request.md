@@ -1,6 +1,6 @@
 ---
 name: '功能需求 ✨'
-about: 对 ims-template 的需求或建议
+about: 对 ims-graph 的需求或建议
 title: '👑 [需求]'
 labels: '👑 Feature'
 assignees: ''

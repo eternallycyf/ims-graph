@@ -1,0 +1,89 @@
+.treeRoot {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+
+.tree04 {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: 'PingFangSC-Regular', 'PingFangSC-Light', 'PingFang SC',
+    sans-serif, 'Microsoft YaHei';
+
+  touch-action: none;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+/* 离开和进入过程中的样式 */
+.v-enter-active,
+.v-leave-active {
+  /* 添加过渡动画 */
+  transition: opacity 0.6s ease;
+}
+
+/* 进入之后和离开之前的样式 */
+.v-enter-to,
+.v-leave-from {
+  opacity: 1;
+}
+
+.detail {
+  position: absolute;
+  z-index: 100;
+  padding: 12px;
+  border: 1px solid #EFF1F4;
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px 0px rgba(222, 225, 231, 0.42);
+
+  span {
+    user-select: text !important;
+  }
+
+
+  .title {
+    color: #2A303B;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .content {
+    color: #8E96A4;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.floatButton {
+  position: fixed;
+  right: 12px;
+  bottom: 72px;
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #EFF1F4;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px 0px rgba(222, 225, 231, 0.42);
+    cursor: pointer;
+  }
+}

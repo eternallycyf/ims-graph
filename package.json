@@ -1,18 +1,18 @@
 {
-  "name": "ims-template",
-  "version": "1.4.0",
-  "description": "a online docs and npm package template",
+  "name": "ims-graph",
+  "version": "1.0.0",
+  "description": "企业图谱",
   "keywords": [
     "npm",
     "template"
   ],
-  "homepage": "https://github.com/eternallycyf/ims-template",
+  "homepage": "https://github.com/eternallycyf/ims-graph",
   "bugs": {
-    "url": "https://github.com/eternallycyf/ims-template/issues/new"
+    "url": "https://github.com/eternallycyf/ims-graph/issues/new"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eternallycyf/ims-template.git"
+    "url": "https://github.com/eternallycyf/ims-graph.git"
   },
   "license": "MIT",
   "author": "eternallycyf(969475322@qq.com)",
@@ -47,7 +47,8 @@
     "test": "vitest --passWithNoTests",
     "test:coverage": "vitest run --coverage --passWithNoTests",
     "test:update": "vitest -u",
-    "type-check": "tsc -p tsconfig-check.json"
+    "type-check": "tsc -p tsconfig-check.json",
+    "check-error": "npm run lint && npm run test && npm run test:coverage && npm run doctor"
   },
   "lint-staged": {
     "*.{md,json}": [
@@ -63,7 +64,9 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.23.1"
+    "@babel/runtime": "^7.23.1",
+    "@types/d3": "^7.4.2",
+    "d3": "^7.8.5"
   },
   "devDependencies": {
     "@ant-design/icons": "^5.2.6",

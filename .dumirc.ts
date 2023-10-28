@@ -2,6 +2,7 @@ import { defineConfig } from 'dumi';
 import type { SiteThemeConfig } from 'dumi-theme-antd-style';
 import path from 'path';
 import { featuresZh } from './config/features';
+import { footer } from './config/footer';
 import style from './docs/siteIndexStyle';
 import { homepage, name as repo } from './package.json';
 
@@ -27,7 +28,7 @@ const themeConfig: SiteThemeConfig = {
           openExternal: true,
         },
       ],
-      features: featuresZh,
+      // features: featuresZh,
     },
     'en-US': {
       description: 'dumi2 theme similar to antd v5 website',
@@ -46,13 +47,16 @@ const themeConfig: SiteThemeConfig = {
   },
   socialLinks: { github: homepage },
   apiHeader: {
-    sourceUrl: `{github}/tree/master/src/components/{atomId}/index.tsx`,
-    docUrl: `{github}/tree/master/example/docs/components/{atomId}.{locale}.md`,
-    pkg: 'ims-template',
-    match: ['/components'],
+    sourceUrl: `https://github.com/eternallycyf/ims-graph/tree/master/src/components/{atomId}/index.tsx`,
+    docUrl: `https://github.com/eternallycyf/ims-graph/tree/master/src/components/{atomId}/index.md`,
+    pkg: 'ims-graph',
+    match: ['/ims-graph/src/component'],
   },
-
-  footer: 'Made with ❤️ by 蚂蚁集团 - AFX & 数字科技',
+  footerConfig: {
+    bottom: '2023',
+    copyright: 'Made with ❤️ by eternallycyf - AFX & 数字科技',
+    columns: footer,
+  },
 };
 
 export default defineConfig({
@@ -63,6 +67,7 @@ export default defineConfig({
   publicPath: isProd ? '/' : basePath,
   alias: {
     [repo]: path.join(__dirname, './src'),
+    [repo + '/src']: path.join(__dirname, './src/*'),
   },
   favicons: [isProd ? '/images/favicon.ico' : `/${repo}/images/favicon.ico`],
   styles: [
@@ -82,6 +87,7 @@ export default defineConfig({
   extraBabelPlugins: ['antd-style'],
   hash: true,
   mock: {},
+  exportStatic: false,
   html2sketch: {},
   mfsu: {
     runtimePublicPath: true,

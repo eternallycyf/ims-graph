@@ -1,7 +1,7 @@
 ---
 hero:
-  title: ims-template
-  description: a npm develop template
+  title: ims-graph
+  description: 企业图谱
   actions:
     - text: 快速上手
       link: /guide
