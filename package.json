@@ -30,6 +30,7 @@
     "build": "father build",
     "build:watch": "father dev",
     "changelog": "conventional-changelog -n node_modules/conventional-changelog-gitmoji-config/lib/index.js -i CHANGELOG.md -s -r 0",
+    "check-error": "npm run lint && npm run test && npm run test:coverage && npm run doctor",
     "ci": "npm run lint && npm run type-check && npm run doctor && npm run build",
     "clean": "rm -rf es lib dist coverage .dumi/tmp .eslintcache",
     "dev": "dumi dev",
@@ -47,8 +48,7 @@
     "test": "vitest --passWithNoTests",
     "test:coverage": "vitest run --coverage --passWithNoTests",
     "test:update": "vitest -u",
-    "type-check": "tsc -p tsconfig-check.json",
-    "check-error": "npm run lint && npm run test && npm run test:coverage && npm run doctor"
+    "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
     "*.{md,json}": [
