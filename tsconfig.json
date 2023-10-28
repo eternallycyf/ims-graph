@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "types": ["vitest/globals"],
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "@/*": ["src"],
+      "ims-template": ["src"],
+      "ims-template/*": ["src/*", "*"]
+    }
+  }
+}
