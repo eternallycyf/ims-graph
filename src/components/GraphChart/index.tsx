@@ -200,7 +200,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
     let newCurTransform = svg.transform;
     let x = newCurTransform.x / 2;
     let y = newCurTransform.y / 2;
-    let scale = newCurTransform.k * 0.8;
+    let scale = newCurTransform.k;
     curTransform = {
       x,
       y,
