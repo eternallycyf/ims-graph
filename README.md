@@ -20,8 +20,6 @@
 
 [![ docs by dumi][dumi-url]](https://d.umijs.org/) [![Build With father][father-url]](https://github.com/umijs/father/)
 
-![](https://github.com/othneildrew/Best-README-Template/raw/master/images/screenshot.png)
-
 <!-- gitpod url -->
 
 [gitpod-badge]: https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod
@@ -55,13 +53,6 @@
 
 </div>
 
-## 简介
-
-- 🏗️ **基于 father4 的构建工具**：本项目采用了基于 father4 的构建工具，可以更高效地构建项目，提高开发效率；
-- 📖 **基于 dumi2 的文档工具**：本项目采用了基于 dumi2 的文档工具，可以更方便地编写和管理文档，提高文档的可读性和可维护性；
-- 🚀 **基于 vercel 自动化触发文档站构建**：本项目使用 vercel 自动化触发文档站构建，可以更快地更新文档站，提高用户的使用体验；
-- 📦 **基于 semantic-release 实现 npm 包的自动化发布**：本项目使用 semantic-release 实现 npm 包的自动化发布，可以更方便地管理和发布 npm 包，提高开发效率。
-
 ## 快速上手
 
 ### 安装
@@ -72,11 +63,13 @@
 pnpm i ims-graph -S
 ```
 
-### 使用
-
-基于该仓库模板可以快速创建一个 npm 包的工程化脚手架。
-
 详情：[CHANGELOG](./CHANGELOG.md)
+
+## 截图
+
+![chart1](https://github.com/eternallycyf/ims-graph/blob/master/public/chart1.png)
+
+![chart2](https://github.com/eternallycyf/ims-graph/blob/master/public/chart2.png)
 
 ## 🤝 Contributing
 
@@ -128,9 +121,3 @@ This project is [MIT](./LICENSE) licensed.
 
 [issues-shield]: https://img.shields.io/github/issues/eternallycyf/ims-graph.svg?style=flat
 [issues-url]: https://github.com/eternallycyf/ims-graph/issues/new/choose
-
-## 截图
-
-![chart1](https://github.com/eternallycyf/ims-graph/blob/master/public/chart1.png)
-
-![chart2](https://github.com/eternallycyf/ims-graph/blob/master/public/chart2.png)
