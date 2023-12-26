@@ -1,5 +1,30 @@
 # Changelog
 
+### [Version&nbsp;1.0.3](https://github.com/eternallycyf/ims-graph/compare/v1.0.2...v1.0.3)
+
+<sup>Released on **2023-12-26**</sup>
+
+#### 🐛 修复
+
+- Upgrade vitest alias use relative aliases.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- Upgrade vitest alias use relative aliases ([278c570](https://github.com/eternallycyf/ims-graph/commit/278c570))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;1.0.2](https://github.com/eternallycyf/ims-graph/compare/v1.0.1...v1.0.2)
 
 <sup>Released on **2023-10-29**</sup>
