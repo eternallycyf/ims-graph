@@ -89,6 +89,7 @@
     "eslint": "^8",
     "father": "^4",
     "husky": "^8",
+    "ims-template-config": "latest",
     "jsdom": "^22",
     "lint-staged": "^13",
     "lodash": "^4.17.21",
