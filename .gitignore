@@ -12,6 +12,7 @@ _roadhog-api-doc
 /es
 /lib
 /server
+/docs-dist
 
 # misc
 .DS_Store

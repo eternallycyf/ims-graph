@@ -20,11 +20,13 @@
     "**/*.less"
   ],
   "main": "lib/index.js",
+  "unpkg": "dist/index.js",
   "module": "es/index.js",
-  "types": "lib/index.d.ts",
+  "types": "es/index.d.ts",
   "files": [
     "lib",
-    "es"
+    "es",
+    "dist"
   ],
   "scripts": {
     "build": "father build",
