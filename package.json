@@ -79,6 +79,7 @@
     "@umijs/lint": "^4",
     "@vitest/coverage-v8": "latest",
     "antd": "^5.9.4",
+    "babel-plugin-add-module-exports": "^1",
     "babel-plugin-antd-style": "^1.0.4",
     "commitlint": "^17",
     "commitlint-config-gitmoji": "^2",
