@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { Tooltip } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { addEvent } from '../../utils';
@@ -82,7 +81,7 @@ const FullScreen: React.FC<any> = (props) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>全屏</title>
-            <g id="1016版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="1016版本" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g
                 id="公司总部业务分工查询-图谱-悬停浮层"
                 transform="translate(-1548.000000, -800.000000)"
@@ -94,7 +93,7 @@ const FullScreen: React.FC<any> = (props) => {
                       id="编组"
                       transform="translate(3.533333, 3.533333)"
                       fill="#5B6371"
-                      fill-rule="nonzero"
+                      fillRule="nonzero"
                     >
                       <path
                         d="M8.93333333,0 L8.93333333,2.46666667 L8,2.46666667 L8,0.933333333 L6.46666667,0.933333333 L6.46666667,0 L8.93333333,0 Z M8.93333333,6.46666667 L8.93333333,8.93333333 L6.46666667,8.93333333 L6.46666667,8 L8,8 L8,6.46666667 L8.93333333,6.46666667 Z M0.933333333,6.46666667 L0.933333333,8 L2.46666667,8 L2.46666667,8.93333333 L0,8.93333333 L0,8.46666667 L0,6.46666667 L0.933333333,6.46666667 Z M2.46666667,0 L2.46666667,0.933333333 L0.933333333,0.933333333 L0.933333333,2.46666667 L0,2.46666667 L0,0 L0.466666667,0 L2.46666667,0 Z"

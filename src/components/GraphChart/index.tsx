@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // TODO 多个图表 需要更换 element.id 为唯一值
 import { CopyFilled } from '@ant-design/icons';
 import { Popover, Table, theme, Tooltip, Typography } from 'antd';
@@ -373,6 +371,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
       .on('click', function (data: any) {
         const d = (data.currentTarget || data.currentTarget).__data__;
         //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-invalid-this
         d3.select(this)
           .selectAll('.node-circle .node-circle-vertical')
           .transition()
@@ -614,8 +613,10 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
         // })
         .attr('width', function (d) {
           //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-invalid-this
           circlewidth1 = d3.select(this.getComputedTextLength())._groups[0][0];
           //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-invalid-this
           return d3.select(this.getComputedTextLength())._groups[0][0];
         })
         .html(function (d: any) {
@@ -676,8 +677,10 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
 
         .attr('width', function (d) {
           //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-invalid-this
           circlewidth3 = d3.select(this.getComputedTextLength())._groups[0][0];
           //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-invalid-this
           return d3.select(this.getComputedTextLength())._groups[0][0];
         })
     );
@@ -710,8 +713,10 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
 
         .attr('width', function (d) {
           //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-invalid-this
           circlewidth2 = d3.select(this.getComputedTextLength())._groups[0][0];
           //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-invalid-this
           return d3.select(this.getComputedTextLength())._groups[0][0];
         })
     );
@@ -921,6 +926,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
       .attr('fill', '#8E96A4')
       .attr('width', function (d: any) {
         //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-invalid-this
         return d3.select(this.getComputedTextLength())._groups[0];
       });
   }
@@ -928,18 +934,6 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
   //末 节点 边框颜色
   getRectStorke(name: any) {
     return '#EFF1F4';
-    switch (name) {
-      case '分支机构':
-        return 'rgb(255, 234, 218)';
-      case '对外投资':
-        return 'rgb(215, 236, 255)';
-      case '股东':
-        return 'rgb(211, 234, 241)';
-      case '高管':
-        return 'rgb(237, 227, 244)';
-      default:
-        return 'rgb(133, 165, 255)';
-    }
   }
 
   testLength(data: any, dirRight: any) {
@@ -960,6 +954,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
             .attr('class', 'test')
             .attr('width', function (d: any) {
               //@ts-ignore
+              // eslint-disable-next-line @typescript-eslint/no-invalid-this
               return d3.select(this.getComputedTextLength())._groups[0][0];
               // console.log(width3,"width3");
             });
@@ -980,6 +975,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
             //eslint-disable-next-line
             .attr('width', function (d: any) {
               //@ts-ignore
+              // eslint-disable-next-line @typescript-eslint/no-invalid-this
               width1 = d3.select(this.getComputedTextLength())._groups[0][0];
             });
           this.svg
@@ -990,6 +986,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
             //eslint-disable-next-line
             .attr('width', function (d: any) {
               //@ts-ignore
+              // eslint-disable-next-line @typescript-eslint/no-invalid-this
               width2 = d3.select(this.getComputedTextLength())._groups[0][0];
             });
 
@@ -1025,10 +1022,12 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
             //eslint-disable-next-line
             .attr('width', function (d: any) {
               //@ts-ignore
+              // eslint-disable-next-line @typescript-eslint/no-invalid-this
               width1 = d3.select(this.getComputedTextLength())._groups[0];
 
               newArr.push(Number(width1) + 100);
               //@ts-ignore
+              // eslint-disable-next-line @typescript-eslint/no-invalid-this
               data.width1 = d3.select(this.getComputedTextLength())._groups[0];
             });
           // $('.test').remove();
@@ -1040,9 +1039,9 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
   }
 
   seat(newArr: string | any[], dirRight: any, data: { y: any }[][]) {
-    for (var j = 0; j < newArr.length; j++) {
+    for (let j = 0; j < newArr.length; j++) {
       if (j != 0) {
-        for (var i = 0; i < data[j].length; i++) {
+        for (let i = 0; i < data[j].length; i++) {
           data[j][i].y = data[j - 1][0].y + newArr[j - 1] - 40;
         }
       }
@@ -1292,7 +1291,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title>放大</title>
-                <g id="1023版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="1023版本" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                   <g id="图谱" transform="translate(-1548.000000, -824.000000)">
                     <g id="编组-4备份" transform="translate(1544.000000, 820.000000)">
                       <g id="1.icon/24/全屏备份" transform="translate(4.000000, 4.000000)">
@@ -1301,7 +1300,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
                           d="M7.77777778,3.53333333 C10.1219107,3.53333333 12.0222222,5.43364489 12.0222222,7.77777778 C12.0222222,8.78160502 11.6737419,9.70404402 11.0911579,10.430718 L12.7092943,12.0493502 L12.0493279,12.7093165 L10.430718,11.0911579 C9.70404402,11.6737419 8.78160502,12.0222222 7.77777778,12.0222222 C5.43364489,12.0222222 3.53333333,10.1219107 3.53333333,7.77777778 C3.53333333,5.43364489 5.43364489,3.53333333 7.77777778,3.53333333 Z M7.77777778,4.46666667 C5.94911066,4.46666667 4.46666667,5.94911066 4.46666667,7.77777778 C4.46666667,9.60644489 5.94911066,11.0888889 7.77777778,11.0888889 C9.60644489,11.0888889 11.0888889,9.60644489 11.0888889,7.77777778 C11.0888889,5.94911066 9.60644489,4.46666667 7.77777778,4.46666667 Z M8.24444444,6.44444444 L8.24433333,7.31133333 L9.11050366,7.31111151 L9.11171857,8.24444405 L8.24433333,8.24533333 L8.24444444,9.11111111 L7.31111111,9.11111111 L7.31033333,8.24633333 L6.44851857,8.24791072 L6.44730366,7.31457817 L7.31033333,7.31333333 L7.31111111,6.44444444 L8.24444444,6.44444444 Z"
                           id="形状结合"
                           fill="#5B6371"
-                          fill-rule="nonzero"
+                          fillRule="nonzero"
                         ></path>
                       </g>
                     </g>
@@ -1320,7 +1319,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title>缩小</title>
-                <g id="1023版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="1023版本" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                   <g id="图谱" transform="translate(-1548.000000, -848.000000)">
                     <g id="编组-4备份-2" transform="translate(1544.000000, 844.000000)">
                       <g id="1.icon/24/全屏备份-2" transform="translate(4.000000, 4.000000)">
@@ -1329,7 +1328,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
                           d="M7.77777778,3.53333333 C10.1219107,3.53333333 12.0222222,5.43364489 12.0222222,7.77777778 C12.0222222,8.78160502 11.6737419,9.70404402 11.0911579,10.430718 L12.7092943,12.0493502 L12.0493279,12.7093165 L10.430718,11.0911579 C9.70404402,11.6737419 8.78160502,12.0222222 7.77777778,12.0222222 C5.43364489,12.0222222 3.53333333,10.1219107 3.53333333,7.77777778 C3.53333333,5.43364489 5.43364489,3.53333333 7.77777778,3.53333333 Z M7.77777778,4.46666667 C5.94911066,4.46666667 4.46666667,5.94911066 4.46666667,7.77777778 C4.46666667,9.60644489 5.94911066,11.0888889 7.77777778,11.0888889 C9.60644489,11.0888889 11.0888889,9.60644489 11.0888889,7.77777778 C11.0888889,5.94911066 9.60644489,4.46666667 7.77777778,4.46666667 Z M9.11111111,7.31111111 L9.11111111,8.24444444 L6.44444444,8.24444444 L6.44444444,7.31111111 L9.11111111,7.31111111 Z"
                           id="形状结合"
                           fill="#5B6371"
-                          fill-rule="nonzero"
+                          fillRule="nonzero"
                         ></path>
                       </g>
                     </g>

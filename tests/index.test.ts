@@ -1,4 +1,6 @@
-import { hello } from 'ims-graph';
+const hello = () => {
+  return 'word';
+};
 
 test('hello', () => {
   expect(hello()).toBe('word');

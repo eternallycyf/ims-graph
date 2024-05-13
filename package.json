@@ -73,6 +73,7 @@
   "dependencies": {
     "@babel/runtime": "^7.23.1",
     "@types/d3": "^7.4.2",
+    "@vitejs/plugin-react": "^4.2.1",
     "d3": "^7.8.5",
     "rc-util": "^5.39.1"
   },

@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 /**
  * 事件绑定
  * @param target
@@ -32,25 +30,25 @@ export const downloadSvgFn = (
   chartName: string,
   rootName: string,
 ) => {
-  var serializer = new XMLSerializer();
-  var source = '<?xml version="1.0" standalone="no"?>\r\n' + serializer.serializeToString(svg);
-  var image = new Image();
+  let serializer = new XMLSerializer();
+  let source = '<?xml version="1.0" standalone="no"?>\r\n' + serializer.serializeToString(svg);
+  let image = new Image();
   image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(source);
   image.onload = function () {
-    var canvas = document.createElement('canvas');
-    var ratio = window.devicePixelRatio || 2;
+    let canvas = document.createElement('canvas');
+    let ratio = window.devicePixelRatio || 2;
     canvas.width = (width + 40) * ratio;
     canvas.height = (height + 40) * ratio;
     canvas.style.height = `${width + 40}px`;
     canvas.style.width = `${height + 40}px`;
-    var context = canvas.getContext('2d') as CanvasRenderingContext2D;
+    let context = canvas.getContext('2d') as CanvasRenderingContext2D;
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
     context.rect(0, 0, width + 40, height + 40);
     context.fillStyle = '#fff';
     context.fill();
     context.drawImage(image, 20, 20);
-    var url = canvas.toDataURL('image/png');
-    var a = document.createElement('a');
+    let url = canvas.toDataURL('image/png');
+    let a = document.createElement('a');
     a.download = chartName + '-' + rootName + '.png';
     a.href = url;
     a.click();
@@ -72,19 +70,20 @@ export const downloadImpByChart = (
     height = box.height;
   if (zoomClassName) {
     //查找zoomObj
+    // eslint-disable-next-line no-var
     var zoomObj = svg.getElementsByClassName(zoomClassName.replace(/\./g, ''))[0];
     if (!zoomObj) {
       return false;
     }
     /*------这里是处理svg缩放的--------*/
-    var transformMath = zoomObj.getAttribute('transform')!,
+    let transformMath = zoomObj.getAttribute('transform')!,
       scaleMath = zoomObj.getAttribute('transform')!;
     if (transformMath || scaleMath) {
-      var transformObj = transformMath.match(/translate\(([^,]*),([^,)]*)\)/)!,
+      let transformObj = transformMath.match(/translate\(([^,]*),([^,)]*)\)/)!,
         scaleObj = scaleMath.match(/scale\((.*)\)/)!;
       if (transformObj || scaleObj) {
         //匹配到缩放
-        var translateX = transformObj[1] as any as number,
+        let translateX = transformObj[1] as any as number,
           translateY = transformObj[2] as any as number,
           scale = scaleObj[1] as any as number;
         x = (x - translateX) / scale;
@@ -95,12 +94,13 @@ export const downloadImpByChart = (
     }
   }
   //克隆svg
-  var node = svg.cloneNode(true) as SVGAElement;
+  let node = svg.cloneNode(true) as SVGAElement;
   //重新设置svg的width,height,viewbox
   node.setAttribute('width', String(width * 2));
   node.setAttribute('height', String(height * 2));
   node.setAttribute('viewBox', [x, y, width, height] as any);
   if (zoomClassName) {
+    // eslint-disable-next-line no-var, @typescript-eslint/no-redeclare
     var zoomObj = node.getElementsByClassName(zoomClassName.replace(/\./g, ''))[0];
     /*-------------清楚缩放元素的缩放-------------*/
     zoomObj.setAttribute('transform', 'translate(0,0) scale(1)');
