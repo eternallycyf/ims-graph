@@ -1,5 +1,32 @@
 # Changelog
 
+### [Version&nbsp;1.2.1](https://github.com/eternallycyf/ims-graph/compare/v1.2.0...v1.2.1)
+
+<sup>Released on **2024-05-13**</sup>
+
+#### 🐛 修复
+
+- Eslint error, remove dockor, remove dockor.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- Eslint error ([22eac75](https://github.com/eternallycyf/ims-graph/commit/22eac75))
+- Remove dockor ([73a1b0f](https://github.com/eternallycyf/ims-graph/commit/73a1b0f))
+- Remove dockor ([a854a9f](https://github.com/eternallycyf/ims-graph/commit/a854a9f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version&nbsp;1.2.0](https://github.com/eternallycyf/ims-graph/compare/v1.1.0...v1.2.0)
 
 <sup>Released on **2024-05-05**</sup>
