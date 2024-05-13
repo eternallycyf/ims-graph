@@ -32,7 +32,7 @@
     "build": "father build",
     "build:watch": "father dev",
     "changelog": "conventional-changelog -n node_modules/conventional-changelog-gitmoji-config/lib/index.js -i CHANGELOG.md -s -r 0",
-    "check-error": "npm run lint && npm run test && npm run test:coverage && npm run doctor",
+    "check-error": "npm run lint && npm run test && npm run test:coverage",
     "ci": "npm run lint && npm run type-check && npm run doctor && npm run build",
     "clean": "rm -rf es lib dist coverage .dumi/tmp .eslintcache",
     "dev": "dumi dev",
