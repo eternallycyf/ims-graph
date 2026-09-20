@@ -1,5 +1,30 @@
 # Changelog
 
+### [Version&nbsp;1.2.2](https://github.com/eternallycyf/ims-graph/compare/v1.2.1...v1.2.2)
+
+<sup>Released on **2026-09-20**</sup>
+
+#### 🐛 修复
+
+- 修复问题.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- 修复问题 ([31fb89b](https://github.com/eternallycyf/ims-graph/commit/31fb89b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;1.2.1](https://github.com/eternallycyf/ims-graph/compare/v1.2.0...v1.2.1)
 
 <sup>Released on **2024-05-13**</sup>
