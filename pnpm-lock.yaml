@@ -93,7 +93,7 @@ importers:
         version: 8.0.3
       ims-template-config:
         specifier: latest
-        version: 1.28.1(@ant-design/icons@5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(antd@5.29.3(date-fns@2.30.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(lodash@4.18.1)
+        version: 1.28.2(@ant-design/icons@5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(antd@5.29.3(date-fns@2.30.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(lodash@4.18.1)
       jsdom:
         specifier: ^22
         version: 22.1.0
@@ -5123,8 +5123,8 @@ packages:
     resolution: {integrity: sha512-rKtvo6a868b5Hu3heneU+L4yEQ4jYKLtjpnPeUdK7h0yzXGmyBTypknlkCvHFBqfX9YlorEiMM6Dnq/5atfHkw==}
     engines: {node: '>=8'}
 
-  ims-template-config@1.28.1:
-    resolution: {integrity: sha512-q755RFct2D6NkA5uRnjUR79FyZS2V60T6KnBih8TGfPtnOeMQF8Ge1vcLEHczFZxqwgPsJnTz5shalznxn4YBA==}
+  ims-template-config@1.28.2:
+    resolution: {integrity: sha512-iDv0KYgYXS77THR6jz7oC7UHCtdA0RKedhjORIRBNMSx5QejfqQyFpt12Hhg6g7AkIdSYln+EvlPe1hh3gEOHw==}
     engines: {node: 24.x}
     peerDependencies:
       '@ant-design/icons': ^5.2.6
@@ -15506,7 +15506,7 @@ snapshots:
 
   import-lazy@4.0.0: {}
 
-  ims-template-config@1.28.1(@ant-design/icons@5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(antd@5.29.3(date-fns@2.30.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(lodash@4.18.1):
+  ims-template-config@1.28.2(@ant-design/icons@5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(antd@5.29.3(date-fns@2.30.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(lodash@4.18.1):
     dependencies:
       '@ant-design/icons': 5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@babel/runtime': 7.29.7
