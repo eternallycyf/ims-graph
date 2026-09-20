@@ -737,8 +737,9 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
     const g = d3
       .select(`#${id}`)
       .on('mouseenter', function (e) {
-        const data = (e.target || e.currentTarget).__data__.data;
-        const depth = (e.target || e.currentTarget).__data__.depth;
+        const target = e.target as any;
+        const data = target.__data__.data;
+        const depth = target.__data__.depth;
         let dom = document.getElementById(id)!;
         let rect = dom.getBoundingClientRect();
         hoverTimer = setTimeout(function () {
@@ -758,7 +759,7 @@ export default class StockTree extends React.PureComponent<IGraphChartProps, any
         }, 500);
       })
       .on('mouseleave', function (e) {
-        if (e.toElement?.className == 'detail') return;
+        if ((e.relatedTarget as Element)?.className == 'detail') return;
         if (hoverTimer) clearTimeout(hoverTimer);
         setTimeout(() => {
           that.setState({
